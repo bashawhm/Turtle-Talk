@@ -1,0 +1,44 @@
+Intent Schema:
+
+{
+  "intents": [
+    {
+      "intent": "GetMovement",
+      "slots": [
+        {
+          "name": "Direction",
+          "type": "DIRECTION"
+        },
+        {
+          "name": "Speed",
+          "type": "SPEED"
+        },
+        {
+          "name": "Distance",
+          "type": "DISTANCE"
+        }
+      ]
+    }
+  ]
+}
+
+
+Custom Slot Values:
+DIRECTION right | left | forward | backward | 71
+DISTANCE 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+SPEED 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+Sample Utterances:
+
+GetMovement journey {Direction} at {Speed}
+GetMovement go {Speed} in {Direction}
+GetMovement after {Distance} at {Speed} turn {Direction} then {Speed}
+GetMovement turn {Direction} then {Direction} at {Speed}
+GetMovement travel {Distance} at {Speed}
+GetMovement go {Direction} at {Speed}
+GetMovement go {Distance} {Direction} at {Speed}
+GetMovement set speed to {Speed}
+GetMovement move {Direction} with {Speed}
+GetMovement travel {Direction} at {Speed} for {Distance}
+GetMovement go {Direction} at {Speed}
+GetMovement set temperature to {Direction}
